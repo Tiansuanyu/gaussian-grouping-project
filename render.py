@@ -96,6 +96,13 @@ def render_set(model_path, name, iteration, views, gaussians, pipeline, backgrou
         
 
         gt_objects = view.objects
+        # Resize gt mask to match rendered resolution (for -r 2/4 support)
+        if gt_objects.shape[-2:] != rendering.shape[-2:]:
+            gt_objects = torch.nn.functional.interpolate(
+                gt_objects.unsqueeze(0).unsqueeze(0).float(),
+                size=rendering.shape[-2:],
+                mode='nearest'
+            ).squeeze(0).squeeze(0).to(view.objects.dtype)
         gt_rgb_mask = visualize_obj(gt_objects.cpu().numpy().astype(np.uint8))
 
         rgb_mask = feature_to_rgb(rendering_obj)

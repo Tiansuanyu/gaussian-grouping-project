@@ -86,6 +86,13 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
         # Object Loss
         gt_obj = viewpoint_cam.objects.cuda().long()
         logits = classifier(objects)
+        # Resize gt mask to match predicted logits resolution (for -r 2/4 support)
+        if gt_obj.shape[-2:] != logits.shape[-2:]:
+            gt_obj = torch.nn.functional.interpolate(
+                gt_obj.unsqueeze(0).unsqueeze(0).float(),
+                size=logits.shape[-2:],
+                mode='nearest'
+            ).squeeze(0).squeeze(0).long()
         loss_obj = cls_criterion(logits.unsqueeze(0), gt_obj.unsqueeze(0)).squeeze().mean()
         loss_obj = loss_obj / torch.log(torch.tensor(num_classes))  # normalize to (0,1)
 
