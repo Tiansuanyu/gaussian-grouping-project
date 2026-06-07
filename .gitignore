@@ -1,0 +1,11 @@
+output/
+data/
+result/
+logs/
+*.pth
+*.ply
+*.zip
+__pycache__/
+*.pyc
+hf_download/
+.cache/
