@@ -13,3 +13,7 @@ hf_download/
 .cache/
 build/
 *.egg-info/
+# Large profiler traces (keep summaries/CSV/patch in git)
+profiling_results/**/*.pt.trace.json
+profiling_results/**/trace*.json
+AGENTS.md
