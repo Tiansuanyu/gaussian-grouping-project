@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+autograd::engine::evaluate_function: _RasterizeGaussiansBackward,5,48.451,9.6902,0.0,5.658
+_RasterizeGaussiansBackward,5,48.451,9.6902,47.497,5.404
+"void renderCUDA<3u, 16u>(uint2 const*, unsigned int const*, int, int, float const*, float2 const*, float4 const*, float const*, float const*, float const*, unsigned int const*, float const*, float const*, float3*, float4*, float*, float*, float*)",5,45.841,9.1682,45.841,0.0
+_RasterizeGaussians,5,9.521,1.9042000000000001,9.346,34.504
+"void renderCUDA<3u, 16u>(uint2 const*, unsigned int const*, int, int, float2 const*, float const*, float const*, float4 const*, float*, unsigned int*, float const*, float*, float*)",5,6.428,1.2855999999999999,6.428,0.0
+"void preprocessCUDA<3>(int, int, int, float3 const*, int const*, float const*, bool const*, glm::vec<3, float, (glm::qualifier)0> const*, glm::vec<4, float, (glm::qualifier)0> const*, float, float const*, glm::vec<3, float, (glm::qualifier)0> const*, float3 const*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*, float*, glm::vec<3, float, (glm::qualifier)0>*, glm::vec<4, float, (glm::qualifier)0>*)",5,1.463,0.2926,1.463,0.0
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<unsigned long, unsigned int, int>::Policy800, false, unsigned long, unsigned int, int, int>(int*, int*, int*, int const*, unsigned long*, unsigned long const*, unsigned int*, unsigned int const*, int, int, int)",30,1.44,0.048,1.44,0.0
+aten::cat,5,1.378,0.2756,1.378,0.151
+"void at::native::(anonymous namespace)::CatArrayBatchedCopy<float, unsigned int, 3, 128, 1>(float*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<float, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",5,1.378,0.2756,1.378,0.0
+aten::copy_,35,1.241,0.035457142857142854,1.241,1.383
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",30,1.147,0.038233333333333334,1.147,0.0
+aten::fill_,85,1.137,0.013376470588235295,1.137,2.297
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",75,1.097,0.014626666666666666,1.097,0.0
+autograd::engine::evaluate_function: torch::autograd::AccumulateGrad,40,1.087,0.027175,0.0,1.687
+torch::autograd::AccumulateGrad,40,1.087,0.027175,0.0,1.268
+aten::zero_,60,0.962,0.016033333333333333,0.0,2.128
+aten::zeros,55,0.924,0.016800000000000002,0.0,3.073
+aten::div,35,0.67,0.019142857142857142,0.67,1.984
+"void preprocessCUDA<3, 16>(int, int, int, float const*, glm::vec<3, float, (glm::qualifier)0> const*, float, glm::vec<4, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool*, float const*, float const*, float const*, float const*, glm::vec<3, float, (glm::qualifier)0> const*, int, int, float, float, float, float, int*, float2*, float*, float*, float*, float4*, dim3, unsigned int*, bool)",5,0.546,0.1092,0.546,0.0
+autograd::engine::evaluate_function: DivBackward0,5,0.536,0.1072,0.0,1.431

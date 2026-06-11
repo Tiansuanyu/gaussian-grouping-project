@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+autograd::engine::evaluate_function: _RasterizeToPixelsBackward,10,20.771,2.0770999999999997,0.0,3.758
+_RasterizeToPixelsBackward,10,20.771,2.0770999999999997,20.603,3.408
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,13.906,2.7811999999999997,13.906,0.0
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,6.697,1.3394000000000001,6.697,0.0
+_RasterizeToPixels,10,5.469,0.5468999999999999,5.469,1.332
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,3.642,0.7283999999999999,3.642,0.0
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,1.827,0.3654,1.827,0.0
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int, int, int>(int*, int*, int*, int const*, long*, long const*, int*, int const*, int, int, int)",60,1.566,0.0261,1.566,0.0
+aten::copy_,95,1.562,0.016442105263157897,1.562,3.946
+autograd::engine::evaluate_function: SelectBackward0,10,1.478,0.14780000000000001,0.0,1.376
+SelectBackward0,10,1.478,0.14780000000000001,0.0,1.229
+aten::select_backward,10,1.478,0.14780000000000001,0.0,1.178
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",20,1.119,0.05595,1.119,0.0
+"void gsplat::intersect_tile_kernel<float>(bool, unsigned int, unsigned int, unsigned int, long const*, long const*, float const*, int const*, float const*, long const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int*, long*, int*)",20,1.095,0.05475,1.095,0.0
+aten::fill_,200,1.029,0.005144999999999999,1.029,5.344
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",185,0.989,0.005345945945945946,0.989,0.0
+aten::zero_,180,0.972,0.0054,0.0,5.653
+aten::zeros,95,0.742,0.007810526315789474,0.0,4.755
+aten::div,35,0.59,0.01685714285714286,0.59,1.706
+aten::mean,10,0.547,0.054700000000000006,0.547,0.832

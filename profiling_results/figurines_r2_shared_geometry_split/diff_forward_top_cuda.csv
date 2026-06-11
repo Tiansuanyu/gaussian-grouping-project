@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+_RasterizeGaussians,5,14.637,2.9274,10.023,8.111
+"void renderCUDA<3u, 16u>(uint2 const*, unsigned int const*, int, int, float2 const*, float const*, float const*, float4 const*, float*, unsigned int*, float const*, float*, float*)",5,7.003,1.4005999999999998,7.003,0.0
+cudaPeekAtLastError,60,2.331,0.03885,2.331,0.0
+cudaMemsetAsync,50,2.052,0.04104,2.048,0.273
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<unsigned long, unsigned int, int>::Policy800, false, unsigned long, unsigned int, int, int>(int*, int*, int*, int const*, unsigned long*, unsigned long const*, unsigned int*, unsigned int const*, int, int, int)",30,1.497,0.0499,1.497,0.0
+aten::cat,5,1.386,0.2772,1.386,0.174
+"void at::native::(anonymous namespace)::CatArrayBatchedCopy<float, unsigned int, 3, 128, 1>(float*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<float, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",5,1.386,0.2772,1.386,0.0
+"void preprocessCUDA<3, 16>(int, int, int, float const*, glm::vec<3, float, (glm::qualifier)0> const*, float, glm::vec<4, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool*, float const*, float const*, float const*, float const*, glm::vec<3, float, (glm::qualifier)0> const*, int, int, float, float, float, float, int*, float2*, float*, float*, float*, float4*, dim3, unsigned int*, bool)",5,0.548,0.10959999999999999,0.548,0.0
+"duplicateWithKeys(int, float2 const*, float const*, unsigned int const*, unsigned long*, unsigned int*, int*, dim3)",5,0.541,0.1082,0.541,0.0
+aten::mean,10,0.217,0.0217,0.217,0.492
+aten::fill_,20,0.208,0.0104,0.181,0.4
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4>)",10,0.207,0.0207,0.207,0.0
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",15,0.159,0.0106,0.159,0.0
+Memset (Device),55,0.159,0.002890909090909091,0.159,0.0
+aten::full,15,0.15,0.01,0.0,0.395
+aten::linalg_vector_norm,5,0.126,0.0252,0.126,0.199
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::NormTwoOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::NormTwoOps<float, float>, unsigned int, float, 4>)",5,0.126,0.0252,0.126,0.0
+"void cub::DeviceRadixSortHistogramKernel<cub::DeviceRadixSortPolicy<unsigned long, unsigned int, int>::Policy800, false, unsigned long, int>(int*, unsigned long const*, int, int, int)",5,0.114,0.0228,0.114,0.0
+aten::div,5,0.108,0.0216,0.1,0.167
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})",5,0.1,0.02,0.1,0.0

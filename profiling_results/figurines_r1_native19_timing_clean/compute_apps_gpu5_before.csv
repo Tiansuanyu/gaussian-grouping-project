@@ -1,0 +1,2 @@
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+GPU-dcf7d0de-8206-eba4-8b2d-be24f354651f, 2050136, python, 432 MiB

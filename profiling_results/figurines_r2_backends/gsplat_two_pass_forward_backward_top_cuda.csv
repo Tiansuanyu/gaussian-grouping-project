@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+autograd::engine::evaluate_function: _RasterizeToPixelsBackward,10,34.116,3.4116,0.0,4.775
+_RasterizeToPixelsBackward,10,34.116,3.4116,33.736,4.358
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,23.325,4.665,23.325,0.0
+autograd::engine::evaluate_function: SliceBackward0,45,11.477,0.25504444444444446,0.0,7.017
+SliceBackward0,45,11.477,0.25504444444444446,0.0,6.294
+aten::slice_backward,45,11.477,0.25504444444444446,0.0,6.021
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,10.411,2.0822,10.411,0.0
+aten::copy_,95,8.283,0.08718947368421053,8.283,33.741
+Memcpy DtoD (Device -> Device),55,6.776,0.1232,6.776,0.0
+_RasterizeToPixels,10,6.26,0.626,6.26,0.793
+aten::fill_,200,6.16,0.0308,6.16,6.038
+aten::zero_,180,6.1,0.033888888888888885,0.0,6.611
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",185,6.093,0.032935135135135137,6.093,0.0
+aten::zeros,95,5.033,0.052978947368421056,0.0,5.796
+autograd::engine::evaluate_function: _FullyFusedProjectionBackward,10,4.357,0.4357,0.0,6.317
+_FullyFusedProjectionBackward,10,3.946,0.3946,3.621,4.261
+"void gsplat::projection_ewa_3dgs_fused_bwd_kernel<float>(unsigned int, unsigned int, unsigned int, float const*, float const*, float const*, float const*, float const*, float const*, unsigned int, unsigned int, float, gsplat::CameraModelType, int const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*, float*, float*, float*)",10,3.621,0.36210000000000003,3.621,0.0
+autograd::engine::evaluate_function: _SphericalHarmonicsBackward,5,3.604,0.7208,0.0,1.19
+_SphericalHarmonicsBackward,5,3.604,0.7208,3.14,1.043
+"void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",35,3.518,0.10051428571428572,3.518,0.0
