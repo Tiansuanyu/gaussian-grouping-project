@@ -1,0 +1,13 @@
+{
+  "model_path": "output/lerf/figurines",
+  "loaded_iteration": 30000,
+  "source_path": "/data2/cse12311966/projects/gaussian-grouping/data/lerf/figurines",
+  "resolution": 2,
+  "view_index": 0,
+  "image_width": 493,
+  "image_height": 364,
+  "num_gaussians": 280344,
+  "warmup": 1,
+  "iters": 1,
+  "profile_iters": 1
+}

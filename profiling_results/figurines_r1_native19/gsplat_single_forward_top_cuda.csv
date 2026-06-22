@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+_RasterizeToPixels,10,5.274,0.5274,5.274,0.741
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,3.501,0.7002,3.501,0.0
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,1.773,0.3546,1.773,0.0
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int, int, int>(int*, int*, int*, int const*, long*, long const*, int*, int const*, int, int, int)",30,0.79,0.026333333333333334,0.79,0.0
+aten::mean,10,0.545,0.0545,0.545,0.477
+"void gsplat::intersect_tile_kernel<float>(bool, unsigned int, unsigned int, unsigned int, long const*, long const*, float const*, int const*, float const*, long const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int*, long*, int*)",10,0.536,0.0536,0.536,0.0
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4>)",10,0.534,0.053399999999999996,0.534,0.0
+aten::inverse,5,0.3,0.06,0.0,2.248
+aten::linalg_inv,5,0.3,0.06,0.0,2.241
+aten::linalg_inv_ex,5,0.26,0.052,0.0,1.437
+aten::linalg_solve_ex,5,0.232,0.0464,0.0,1.116
+aten::_linalg_solve_ex,5,0.232,0.0464,0.0,1.031
+aten::linalg_lu_solve,5,0.144,0.0288,0.12,0.512
+Memset (Device),50,0.124,0.00248,0.124,0.0
+aten::linalg_lu_factor_ex,5,0.088,0.0176,0.073,0.34
+aten::copy_,25,0.086,0.00344,0.086,4.821
+aten::cat,5,0.08,0.016,0.08,0.169
+"void at::native::(anonymous namespace)::CatArrayBatchedCopy<float, unsigned int, 3, 128, 1>(float*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<float, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",5,0.08,0.016,0.08,0.0
+aten::cumsum,5,0.078,0.0156,0.048,0.403
+"void cub::DeviceRadixSortHistogramKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int>(int*, long const*, int, int, int)",5,0.065,0.013,0.065,0.0

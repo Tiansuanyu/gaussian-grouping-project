@@ -1,0 +1,56 @@
+diff --git a/gsplat/cuda/_wrapper.py b/gsplat/cuda/_wrapper.py
+index 286685f..ee69d33 100644
+--- a/gsplat/cuda/_wrapper.py
++++ b/gsplat/cuda/_wrapper.py
+@@ -615,6 +615,7 @@ def rasterize_to_pixels(
+         9,
+         16,
+         17,
++        19,
+         32,
+         33,
+         64,
+diff --git a/gsplat/cuda/csrc/Rasterization.cpp b/gsplat/cuda/csrc/Rasterization.cpp
+index 69fdbbb..61ef908 100644
+--- a/gsplat/cuda/csrc/Rasterization.cpp
++++ b/gsplat/cuda/csrc/Rasterization.cpp
+@@ -96,6 +96,7 @@ std::tuple<at::Tensor, at::Tensor, at::Tensor> rasterize_to_pixels_3dgs_fwd(
+         __LAUNCH_KERNEL__(9)
+         __LAUNCH_KERNEL__(16)
+         __LAUNCH_KERNEL__(17)
++        __LAUNCH_KERNEL__(19)
+         __LAUNCH_KERNEL__(32)
+         __LAUNCH_KERNEL__(33)
+         __LAUNCH_KERNEL__(64)
+@@ -207,6 +208,7 @@ rasterize_to_pixels_3dgs_bwd(
+         __LAUNCH_KERNEL__(9)
+         __LAUNCH_KERNEL__(16)
+         __LAUNCH_KERNEL__(17)
++        __LAUNCH_KERNEL__(19)
+         __LAUNCH_KERNEL__(32)
+         __LAUNCH_KERNEL__(33)
+         __LAUNCH_KERNEL__(64)
+diff --git a/gsplat/cuda/csrc/RasterizeToPixels3DGSBwd.cu b/gsplat/cuda/csrc/RasterizeToPixels3DGSBwd.cu
+index 7f1c025..e991107 100644
+--- a/gsplat/cuda/csrc/RasterizeToPixels3DGSBwd.cu
++++ b/gsplat/cuda/csrc/RasterizeToPixels3DGSBwd.cu
+@@ -415,6 +415,7 @@ __INS__(8)
+ __INS__(9)
+ __INS__(16)
+ __INS__(17)
++__INS__(19)
+ __INS__(32)
+ __INS__(33)
+ __INS__(64)
+diff --git a/gsplat/cuda/csrc/RasterizeToPixels3DGSFwd.cu b/gsplat/cuda/csrc/RasterizeToPixels3DGSFwd.cu
+index b78a873..d0350ac 100644
+--- a/gsplat/cuda/csrc/RasterizeToPixels3DGSFwd.cu
++++ b/gsplat/cuda/csrc/RasterizeToPixels3DGSFwd.cu
+@@ -295,6 +295,7 @@ __INS__(8)
+ __INS__(9)
+ __INS__(16)
+ __INS__(17)
++__INS__(19)
+ __INS__(32)
+ __INS__(33)
+ __INS__(64)

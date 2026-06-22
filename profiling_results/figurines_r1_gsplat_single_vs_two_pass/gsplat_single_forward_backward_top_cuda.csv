@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+autograd::engine::evaluate_function: _RasterizeToPixelsBackward,5,70.118,14.0236,0.0,2.286
+_RasterizeToPixelsBackward,5,70.118,14.0236,70.031,2.052
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<32u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,70.031,14.006200000000002,70.031,0.0
+aten::div,35,11.285,0.32242857142857145,11.285,1.93
+autograd::engine::evaluate_function: MeanBackward0,10,11.169,1.1169,0.0,1.25
+MeanBackward0,10,11.169,1.1169,0.0,1.121
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",10,11.169,1.1169,11.169,0.0
+autograd::engine::evaluate_function: SliceBackward0,25,8.693,0.34772000000000003,0.0,3.92
+SliceBackward0,25,7.358,0.29431999999999997,0.0,3.279
+aten::slice_backward,25,7.358,0.29431999999999997,0.0,3.148
+_RasterizeToPixels,5,7.168,1.4336,7.168,0.462
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<32u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,7.168,1.4336,7.168,0.0
+aten::fill_,140,5.413,0.038664285714285714,5.413,3.965
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",130,5.383,0.041407692307692305,5.383,0.0
+aten::zero_,120,5.355,0.044625,0.0,4.116
+aten::zeros,70,5.209,0.07441428571428571,0.0,3.797
+aten::copy_,70,3.872,0.05531428571428572,3.872,71.462
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",30,2.789,0.09296666666666667,2.789,0.0
+"void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",20,1.385,0.06925,1.385,0.0
+autograd::engine::evaluate_function: SelectBackward0,5,1.375,0.275,0.0,0.791

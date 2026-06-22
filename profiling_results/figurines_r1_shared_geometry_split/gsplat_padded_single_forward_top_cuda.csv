@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+_RasterizeToPixels,5,7.313,1.4626,7.313,0.479
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<32u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,7.313,1.4626,7.313,0.0
+aten::mean,10,1.183,0.1183,1.183,0.575
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4>)",10,1.173,0.1173,1.173,0.0
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int, int, int>(int*, int*, int*, int const*, long*, long const*, int*, int const*, int, int, int)",30,0.782,0.026066666666666665,0.782,0.0
+"void gsplat::intersect_tile_kernel<float>(bool, unsigned int, unsigned int, unsigned int, long const*, long const*, float const*, int const*, float const*, long const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int*, long*, int*)",10,0.54,0.054,0.54,0.0
+aten::inverse,5,0.296,0.0592,0.0,2.341
+aten::linalg_inv,5,0.296,0.0592,0.0,2.335
+aten::linalg_inv_ex,5,0.256,0.0512,0.0,1.732
+aten::linalg_solve_ex,5,0.231,0.046200000000000005,0.0,1.293
+aten::_linalg_solve_ex,5,0.231,0.046200000000000005,0.0,1.196
+aten::cat,25,0.198,0.00792,0.198,0.843
+"void at::native::(anonymous namespace)::CatArrayBatchedCopy<float, unsigned int, 3, 128, 1>(float*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<float, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",15,0.158,0.010533333333333334,0.158,0.0
+aten::linalg_lu_solve,5,0.142,0.028399999999999998,0.12,0.629
+Memset (Device),50,0.118,0.0023599999999999997,0.118,0.0
+aten::linalg_lu_factor_ex,5,0.089,0.0178,0.074,0.358
+aten::copy_,25,0.086,0.00344,0.086,4.963
+aten::fill_,30,0.076,0.002533333333333333,0.076,0.651
+aten::cumsum,5,0.075,0.015,0.045,0.447
+aten::zero_,25,0.061,0.00244,0.0,0.645

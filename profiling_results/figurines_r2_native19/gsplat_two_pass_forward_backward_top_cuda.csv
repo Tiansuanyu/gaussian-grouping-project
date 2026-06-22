@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+autograd::engine::evaluate_function: _RasterizeToPixelsBackward,10,30.482,3.0482,0.0,5.84
+_RasterizeToPixelsBackward,10,30.482,3.0482,30.096,5.28
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,19.628,3.9255999999999998,19.628,0.0
+autograd::engine::evaluate_function: SliceBackward0,45,11.156,0.2479111111111111,0.0,8.047
+SliceBackward0,45,11.156,0.2479111111111111,0.0,7.192
+aten::slice_backward,45,11.156,0.2479111111111111,0.0,6.888
+aten::copy_,95,11.022,0.11602105263157896,11.022,26.349
+"void gsplat::rasterize_to_pixels_3dgs_bwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float const*, int const*, float const*, float const*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<2, float, (glm::qualifier)0>*, glm::vec<3, float, (glm::qualifier)0>*, float*, float*)",5,10.468,2.0936,10.468,0.0
+Memcpy DtoD (Device -> Device),55,9.511,0.17292727272727274,9.511,0.0
+_RasterizeToPixels,10,6.199,0.6199,6.199,0.964
+autograd::engine::evaluate_function: _FullyFusedProjectionBackward,10,4.285,0.4285,0.0,7.222
+_FullyFusedProjectionBackward,10,3.872,0.3872,3.548,5.007
+"void gsplat::projection_ewa_3dgs_fused_bwd_kernel<float>(unsigned int, unsigned int, unsigned int, float const*, float const*, float const*, float const*, float const*, float const*, unsigned int, unsigned int, float, gsplat::CameraModelType, int const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*, float*, float*, float*)",10,3.548,0.3548,3.548,0.0
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,3.441,0.6882,3.441,0.0
+aten::fill_,200,3.098,0.01549,3.098,7.08
+aten::zero_,180,3.039,0.016883333333333334,0.0,7.872
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",185,3.034,0.016399999999999998,3.034,0.0
+autograd::engine::evaluate_function: LinalgVectorNormBackward0,5,2.996,0.5992000000000001,0.0,1.806
+LinalgVectorNormBackward0,5,2.871,0.5742,0.0,1.437
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,2.758,0.5516,2.758,0.0
