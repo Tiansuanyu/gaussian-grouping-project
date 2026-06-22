@@ -1,0 +1,43 @@
+{
+  "algorithm": "kmeans",
+  "checkpoint_path": "output/lerf/ramen/point_cloud/iteration_30000/point_cloud.ply",
+  "cluster_count": 16,
+  "cluster_sizes": {
+    "0": 58916,
+    "1": 73029,
+    "2": 120091,
+    "3": 116393,
+    "4": 83441,
+    "5": 102742,
+    "6": 15470,
+    "7": 91949,
+    "8": 15993,
+    "9": 56016,
+    "10": 129876,
+    "11": 39440,
+    "12": 74819,
+    "13": 86124,
+    "14": 18285,
+    "15": 31485
+  },
+  "feature_dim": 16,
+  "inertia": 11554691.0,
+  "loaded_iteration": 30000,
+  "model_path": "output/lerf/ramen",
+  "n_clusters": 16,
+  "noise_points": 0,
+  "num_points": 1114069,
+  "pca_explained_variance_ratio": [
+    0.14742155373096466,
+    0.12745006382465363,
+    0.10108745098114014
+  ],
+  "pca_explained_variance_sum": 0.3759590685367584,
+  "plot_path": "analysis/feature_cluster_results/ramen/iteration_30000/kmeans/scatter_3d.png",
+  "plot_sample_size": 20000,
+  "scene": "ramen",
+  "sh_degree": 3,
+  "silhouette_sample_size": 4992,
+  "silhouette_score": 0.24782916903495789,
+  "silhouette_status": "ok"
+}

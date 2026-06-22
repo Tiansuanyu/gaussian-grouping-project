@@ -1,0 +1,33 @@
+{
+  "algorithm": "hdbscan",
+  "backend": "sklearn",
+  "checkpoint_path": "output/lerf/ramen/point_cloud/iteration_30000/point_cloud.ply",
+  "cluster_count": 3,
+  "cluster_sizes": {
+    "0": 856,
+    "1": 3176,
+    "2": 549
+  },
+  "feature_dim": 16,
+  "loaded_iteration": 30000,
+  "model_path": "output/lerf/ramen",
+  "n_clusters": 3,
+  "noise_points": 45419,
+  "num_points": 1114069,
+  "pca_explained_variance_ratio": [
+    0.14742155373096466,
+    0.12745006382465363,
+    0.10108745098114014
+  ],
+  "pca_explained_variance_sum": 0.3759590685367584,
+  "plot_path": "analysis/feature_cluster_results/ramen/iteration_30000/hdbscan/scatter_3d.png",
+  "plot_sample_size": 4581,
+  "sample_source_points": 1114069,
+  "sampled_points": 50000,
+  "scene": "ramen",
+  "sh_degree": 3,
+  "silhouette_sample_size": 2932,
+  "silhouette_score": 0.5425459742546082,
+  "silhouette_status": "ok",
+  "status": "ok"
+}

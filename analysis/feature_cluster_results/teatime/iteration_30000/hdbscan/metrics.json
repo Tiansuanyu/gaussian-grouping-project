@@ -1,0 +1,32 @@
+{
+  "algorithm": "hdbscan",
+  "backend": "sklearn",
+  "checkpoint_path": "output/lerf/teatime/point_cloud/iteration_30000/point_cloud.ply",
+  "cluster_count": 2,
+  "cluster_sizes": {
+    "0": 516,
+    "1": 11045
+  },
+  "feature_dim": 16,
+  "loaded_iteration": 30000,
+  "model_path": "output/lerf/teatime",
+  "n_clusters": 2,
+  "noise_points": 38439,
+  "num_points": 279705,
+  "pca_explained_variance_ratio": [
+    0.2678752541542053,
+    0.09160745143890381,
+    0.08717599511146545
+  ],
+  "pca_explained_variance_sum": 0.4466587007045746,
+  "plot_path": "analysis/feature_cluster_results/teatime/iteration_30000/hdbscan/scatter_3d.png",
+  "plot_sample_size": 10516,
+  "sample_source_points": 279705,
+  "sampled_points": 50000,
+  "scene": "teatime",
+  "sh_degree": 3,
+  "silhouette_sample_size": 3016,
+  "silhouette_score": 0.3592972159385681,
+  "silhouette_status": "ok",
+  "status": "ok"
+}

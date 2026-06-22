@@ -1,0 +1,32 @@
+{
+  "algorithm": "hdbscan",
+  "backend": "sklearn",
+  "checkpoint_path": "output/lerf/figurines/point_cloud/iteration_30000/point_cloud.ply",
+  "cluster_count": 2,
+  "cluster_sizes": {
+    "0": 15614,
+    "1": 925
+  },
+  "feature_dim": 16,
+  "loaded_iteration": 30000,
+  "model_path": "output/lerf/figurines",
+  "n_clusters": 2,
+  "noise_points": 33461,
+  "num_points": 280344,
+  "pca_explained_variance_ratio": [
+    0.16432763636112213,
+    0.11640448868274689,
+    0.1008315309882164
+  ],
+  "pca_explained_variance_sum": 0.381563663482666,
+  "plot_path": "analysis/feature_cluster_results/figurines/iteration_30000/hdbscan/scatter_3d.png",
+  "plot_sample_size": 10925,
+  "sample_source_points": 280344,
+  "sampled_points": 50000,
+  "scene": "figurines",
+  "sh_degree": 3,
+  "silhouette_sample_size": 3425,
+  "silhouette_score": 0.49526655673980713,
+  "silhouette_status": "ok",
+  "status": "ok"
+}
