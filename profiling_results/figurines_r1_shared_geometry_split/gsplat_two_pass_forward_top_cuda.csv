@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+_RasterizeToPixels,10,5.896,0.5896,5.895,0.977
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,3.911,0.7822,3.911,0.0
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,1.984,0.3968,1.984,0.0
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int, int, int>(int*, int*, int*, int const*, long*, long const*, int*, int const*, int, int, int)",60,1.636,0.027266666666666665,1.636,0.0
+"void gsplat::intersect_tile_kernel<float>(bool, unsigned int, unsigned int, unsigned int, long const*, long const*, float const*, int const*, float const*, long const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int*, long*, int*)",20,1.174,0.0587,1.174,0.0
+aten::mean,10,0.561,0.056100000000000004,0.552,0.615
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4>)",10,0.542,0.054200000000000005,0.542,0.0
+cudaMemsetAsync,90,0.419,0.004655555555555556,0.419,0.602
+aten::linalg_inv,5,0.321,0.06420000000000001,0.0,2.555
+aten::linalg_inv_ex,5,0.279,0.055799999999999995,0.0,1.874
+aten::inverse,5,0.258,0.0516,0.0,2.566
+aten::linalg_solve_ex,5,0.249,0.0498,0.0,1.452
+aten::_linalg_solve_ex,5,0.249,0.0498,0.0,1.317
+Memset (Device),90,0.231,0.0025666666666666667,0.231,0.0
+cudaLaunchKernel,305,0.214,0.0007016393442622951,0.214,3.152
+aten::cumsum,10,0.196,0.019600000000000003,0.085,0.951
+aten::linalg_lu_solve,5,0.151,0.030199999999999998,0.129,0.694
+aten::copy_,30,0.131,0.004366666666666666,0.106,1.907
+"void cub::DeviceRadixSortHistogramKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int>(int*, long const*, int, int, int)",10,0.131,0.013099999999999999,0.131,0.0
+aten::gt,10,0.118,0.011800000000000001,0.031,0.388

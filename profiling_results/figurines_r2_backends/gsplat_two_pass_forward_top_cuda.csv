@@ -1,0 +1,21 @@
+name,calls,cuda_total_ms,cuda_avg_ms,self_cuda_total_ms,cpu_total_ms
+_RasterizeToPixels,10,6.239,0.6239,6.239,0.79
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<16u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,3.432,0.6864,3.432,0.0
+"void gsplat::rasterize_to_pixels_3dgs_fwd_kernel<3u, float>(unsigned int, unsigned int, unsigned int, bool, glm::vec<2, float, (glm::qualifier)0> const*, glm::vec<3, float, (glm::qualifier)0> const*, float const*, float const*, float const*, bool const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int const*, int const*, float*, float*, int*)",5,2.807,0.5614,2.807,0.0
+"void cub::DeviceRadixSortOnesweepKernel<cub::DeviceRadixSortPolicy<long, int, int>::Policy800, false, long, int, int, int>(int*, int*, int*, int const*, long*, long const*, int*, int const*, int, int, int)",60,1.619,0.026983333333333335,1.619,0.0
+aten::cat,5,1.369,0.2738,1.369,0.185
+"void at::native::(anonymous namespace)::CatArrayBatchedCopy<float, unsigned int, 3, 128, 1>(float*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<float, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",5,1.369,0.2738,1.369,0.0
+"void gsplat::intersect_tile_kernel<float>(bool, unsigned int, unsigned int, unsigned int, long const*, long const*, float const*, int const*, float const*, long const*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int*, long*, int*)",20,0.663,0.03315,0.663,0.0
+_FullyFusedProjection,10,0.424,0.0424,0.424,0.931
+"void gsplat::projection_ewa_3dgs_fused_fwd_kernel<float>(unsigned int, unsigned int, unsigned int, float const*, float const*, float const*, float const*, float const*, float const*, float const*, unsigned int, unsigned int, float, float, float, float, gsplat::CameraModelType, int*, float*, float*, float*, float*)",10,0.424,0.0424,0.424,0.0
+aten::inverse,5,0.3,0.06,0.0,2.339
+aten::linalg_inv,5,0.3,0.06,0.0,2.323
+aten::linalg_inv_ex,5,0.262,0.052399999999999995,0.0,1.586
+Memset (Device),90,0.25,0.002777777777777778,0.25,0.0
+aten::mean,10,0.239,0.023899999999999998,0.239,0.48
+aten::linalg_solve_ex,5,0.231,0.046200000000000005,0.0,1.195
+aten::_linalg_solve_ex,5,0.231,0.046200000000000005,0.0,1.077
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4>)",10,0.223,0.0223,0.223,0.0
+_SphericalHarmonics,5,0.219,0.0438,0.219,0.303
+"void gsplat::spherical_harmonics_fwd_kernel<float>(unsigned int, unsigned int, unsigned int, glm::vec<3, float, (glm::qualifier)0> const*, float const*, bool const*, float*)",5,0.219,0.0438,0.219,0.0
+aten::cumsum,10,0.215,0.0215,0.134,0.752

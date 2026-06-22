@@ -1,0 +1,330 @@
+
+==============NVSMI LOG==============
+
+Timestamp                                              : Thu Jun 11 10:52:30 2026
+Driver Version                                         : 580.159.03
+CUDA Version                                           : 13.0
+
+Attached GPUs                                          : 7
+GPU 00000000:05:00.0
+    Temperature
+        GPU Current Temp                               : 55 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 54 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 1335 MHz
+        SM                                             : 1335 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1200 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 52638.16 sec
+        Number of Samples                              : 100
+        Max                                            : 1537 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1259 MHz
+    Memory Clock Samples
+        Duration                                       : 52638.16 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
+GPU 00000000:07:00.0
+    Temperature
+        GPU Current Temp                               : 58 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 59 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 1335 MHz
+        SM                                             : 1335 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1200 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 27788.21 sec
+        Number of Samples                              : 100
+        Max                                            : 1470 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1196 MHz
+    Memory Clock Samples
+        Duration                                       : 27788.21 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
+GPU 00000000:09:00.0
+    Temperature
+        GPU Current Temp                               : 59 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 58 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 1335 MHz
+        SM                                             : 1335 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1200 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 41080.11 sec
+        Number of Samples                              : 100
+        Max                                            : 1335 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1220 MHz
+    Memory Clock Samples
+        Duration                                       : 41080.11 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
+GPU 00000000:0D:00.0
+    Temperature
+        GPU Current Temp                               : 64 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 64 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 1335 MHz
+        SM                                             : 1335 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1200 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 25928.53 sec
+        Number of Samples                              : 100
+        Max                                            : 1470 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1334 MHz
+    Memory Clock Samples
+        Duration                                       : 25928.53 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
+GPU 00000000:0E:00.0
+    Temperature
+        GPU Current Temp                               : 66 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 66 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 1335 MHz
+        SM                                             : 1335 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1200 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 1000.55 sec
+        Number of Samples                              : 100
+        Max                                            : 1537 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1203 MHz
+    Memory Clock Samples
+        Duration                                       : 1000.55 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
+GPU 00000000:0F:00.0
+    Temperature
+        GPU Current Temp                               : 47 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 44 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 1200 MHz
+        SM                                             : 1200 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1080 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 1050367.26 sec
+        Number of Samples                              : 100
+        Max                                            : 1335 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1182 MHz
+    Memory Clock Samples
+        Duration                                       : 1050367.26 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
+GPU 00000000:10:00.0
+    Temperature
+        GPU Current Temp                               : 40 C
+        GPU T.Limit Temp                               : N/A
+        GPU Shutdown Temp                              : 100 C
+        GPU Slowdown Temp                              : 97 C
+        GPU Max Operating Temp                         : 91 C
+        GPU Target Temperature                         : 84 C
+        Memory Current Temp                            : 38 C
+        Memory Max Operating Temp                      : 95 C
+    Clocks
+        Graphics                                       : 135 MHz
+        SM                                             : 135 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 555 MHz
+    Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Default Applications Clocks
+        Graphics                                       : 1200 MHz
+        Memory                                         : 850 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1912 MHz
+        SM                                             : 1912 MHz
+        Memory                                         : 850 MHz
+        Video                                          : 1717 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : N/A
+    SM Clock Samples
+        Duration                                       : 9995.64 sec
+        Number of Samples                              : 100
+        Max                                            : 1470 MHz
+        Min                                            : 135 MHz
+        Avg                                            : 1183 MHz
+    Memory Clock Samples
+        Duration                                       : 9995.64 sec
+        Number of Samples                              : 100
+        Max                                            : 850 MHz
+        Min                                            : 850 MHz
+        Avg                                            : 850 MHz
+    Clock Policy
+        Auto Boost                                     : N/A
+        Auto Boost Default                             : N/A
+
