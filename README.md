@@ -9,6 +9,69 @@ We propose Gaussian Grouping, which extends Gaussian Splatting to jointly **reco
 
 <img width="1000" alt="image" src='media/teaser_github_demo.gif'>
 
+# This Fork: gsplat Backend + Profiling
+
+This repository is based on the original **Gaussian Grouping** codebase. The main engineering change in this fork is that the differentiable rendering path has been refactored to support a faster **gsplat** backend while keeping the original `diff-gaussian-rasterization` backend available for comparison and debugging.
+
+The backend switch is centralized in `gaussian_renderer.render()`, so training, rendering, evaluation, and downstream editing scripts continue to use the same high-level entry point.
+
+## Render Backend Modes
+
+| Backend | How to enable | Notes |
+| --- | --- | --- |
+| `gsplat` shared-geometry split raster | default, or `USE_GSPLAT=1 USE_GSPLAT_NATIVE19=0` | Default accelerated backend. It shares projection/tile sorting and rasterizes RGB and 16-D identity features separately. It works with stock gsplat. |
+| `gsplat` native19 single pass | `USE_GSPLAT=1 USE_GSPLAT_NATIVE19=1` | Fastest measured backend. It rasterizes RGB + 16-D identity features as a 19-channel payload in one pass, and requires a patched gsplat build with native CDIM=19 support. |
+| Original diff rasterizer | `USE_GSPLAT=0` | Original Gaussian Grouping backend, kept as a reference path. |
+
+Example training commands:
+
+```bash
+# Default accelerated backend.
+CUDA_VISIBLE_DEVICES=0 python train.py \
+  -s data/lerf/figurines \
+  -r 2 \
+  -m output/lerf/figurines \
+  --config_file config/gaussian_dataset/train.json \
+  --train_split
+
+# Fastest backend, only if the installed gsplat supports native 19-channel rasterization.
+CUDA_VISIBLE_DEVICES=0 USE_GSPLAT_NATIVE19=1 python train.py \
+  -s data/lerf/figurines \
+  -r 2 \
+  -m output/lerf/figurines \
+  --config_file config/gaussian_dataset/train.json \
+  --train_split
+
+# Original backend for debugging or ablations.
+CUDA_VISIBLE_DEVICES=0 USE_GSPLAT=0 python train.py \
+  -s data/lerf/figurines \
+  -r 2 \
+  -m output/lerf/figurines \
+  --config_file config/gaussian_dataset/train.json \
+  --train_split
+```
+
+When `USE_GSPLAT_NATIVE19=1` is requested, the code checks the installed gsplat wrapper and raises an error if native 19-channel rasterization is not available. It does not silently fall back to padded 32-channel rasterization.
+
+## Profiling Summary
+
+Clean timing was measured with `script/profile_render_backends.py` using CUDA events only in the timing path, 10 training views per scene, interleaved backend order, 50 warmup rounds, 20 measured rounds per view, and `nvidia-smi pmon` logs to verify that the target GPU was not shared during the run. The table below reports forward+backward training-mode render time from [`profiling_results/THREE_SCENE_SUMMARY.md`](profiling_results/THREE_SCENE_SUMMARY.md).
+
+| Scene | Gaussians | Original diff ms | gsplat split ms | gsplat native19 ms | native19 vs split |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| ramen | 1,114,069 | 22.415 | 19.675 | 16.722 | 15.0% faster |
+| figurines | 280,344 | 12.901 | 7.699 | 6.457 | 16.1% faster |
+| teatime | 279,705 | 11.462 | 6.803 | 6.019 | 11.5% faster |
+
+The safe conclusion from these runs is that native19 is consistently the fastest measured backend across the three LERF scenes, while the default split gsplat backend remains the portable accelerated option because it does not require modifying upstream gsplat.
+
+Additional profiling artifacts:
+
+- Clean three-scene timing report: [`profiling_results/THREE_SCENE_SUMMARY.md`](profiling_results/THREE_SCENE_SUMMARY.md)
+- PTXAS register/occupancy audit: [`profiling_results/PTXAS_OCCUPANCY.md`](profiling_results/PTXAS_OCCUPANCY.md)
+- Timing script: [`script/profile_render_backends.py`](script/profile_render_backends.py)
+- PTXAS/occupancy audit script: [`script/occupancy_gsplat_raster.py`](script/occupancy_gsplat_raster.py)
+
 Updates
 -----------------
 :fire::fire: 2024/01/16: We released the [LERF-Mask dataset](docs/dataset.md) and evaluation code.
